@@ -1,0 +1,23 @@
+[
+    {
+        "image": "rgb/0000001.jpg",
+        "prompt": "",
+        "edit_image": [
+            "thermal/0000001.jpg"
+        ]
+    },
+    {
+        "image": "rgb/0000002.jpg",
+        "prompt": "",
+        "edit_image": [
+            "thermal/0000002.jpg"
+        ]
+    },
+    {
+        "image": "rgb/0000003.jpg",
+        "prompt": "",
+        "edit_image": [
+            "thermal/0000003.jpg"
+        ]
+    }
+]
