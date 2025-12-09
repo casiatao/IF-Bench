@@ -103,6 +103,7 @@ CUDA_VISIBLE_DEVICES=0 python3 bench_evaluate.py \
 ### ✈️ Parallel Evalution with Multi-Node and Multi-GPU
 To accelerate the evaluation, we support parallel evaluation with multi-node multi-gpu. Some examples are shown below.
 - Prepare hostfile
+
 Build a hostfile with the format as follows.
 ```
 ip1
