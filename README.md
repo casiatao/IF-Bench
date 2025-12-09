@@ -1,4 +1,19 @@
-# IF-Bench
+<!-- # IF-Bench -->
+
+<h1 align="center"> IF-Bench: Benchmarking and Enhancing MLLMs for Infrared Images
+with Generative Visual Prompting </h1>
+
+<p align="center">
+  <!-- <a href='https://arxiv.org/abs/2502.01051'>
+  <img src='https://img.shields.io/badge/Arxiv-2502.01051-A42C25?style=flat&logo=arXiv&logoColor=A42C25'></a>  -->
+  <a href='https://huggingface.co/datasets/casiatao/IF-Bench'>
+  <img src='https://img.shields.io/badge/%F0%9F%A4%97%20Benchmark-IF Bench-yellow'></a>
+  <!-- <a href='https://huggingface.co/casiatao/LRM'>
+  <img src='https://img.shields.io/badge/%F0%9F%A4%97%20Model-GenViP-yellow'></a> -->
+  <a href='https://visitor-badge.laobi.icu/badge?page_id=casiatao.IF-Bench'>
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=casiatao.IF-Bench&left_color=gray&right_color=%2342b983"></a> 
+</p>
+
 
 ## 📖 Introduction
 This repository contains the official evaluation implementation of IF-Bench, the first high-quality benchmark for evaluating multimodal understanding of infrared images, and the training implementation of editing models in GenViP.
@@ -24,12 +39,12 @@ pip install -e .
 ## 🛠️ Evaluation on IF-Bench
 All supported models are listed in `load_func_dict` in `evaluate/bench_evaluate.py`. You can add your own model by adding a new model loading function in `load_func_dict` and its corresponding infer function. We provide some examples below.
 
-### Quick Start
+### 🏃 Quick Start
 - Image Download
 
-(1) Download images in IF-Bench and save in `if_bench/infrared_imgs`.
+(1) Download images in IF-Bench from [HuggingFace](https://huggingface.co/datasets/casiatao/IF-Bench) and save in `evaluate/if_bench/infrared_imgs`.
 
-(2) Download translated images in GenViP and save in `if_bench/translated_rgb_imgs`.
+(2) Download translated images in GenViP from [HuggingFace](https://huggingface.co/datasets/casiatao/IF-Bench) and save in `evaluate/if_bench/translated_rgb_imgs`.
 
 - Launch Evaluation
 ```
@@ -85,7 +100,7 @@ CUDA_VISIBLE_DEVICES=0 python3 bench_evaluate.py \
 # other cases are similar to qwen25_vl_7b
 ```
 
-### ⏩ Parallel Evalution with Multi-Node and Multi-GPU
+### ✈️ Parallel Evalution with Multi-Node and Multi-GPU
 To accelerate the evaluation, we support parallel evaluation with multi-node multi-gpu. Some examples are shown below.
 - Prepare hostfile
 Build a hostfile with the format as follows.
@@ -172,7 +187,7 @@ python3 merge_results.py \
 # other cases are similar to qwen25_vl_7b
 ```
 
-## ✈️ (Optional) Fine-tuning of Editing Models in GenViP
+## 🤗 (Optional) Fine-tuning of Editing Models in GenViP
 Our fine-tuning of Qwen-Edit-2509 is based on the DiffSynth-Studio.
 Prepare training data `rgbt_dataset.json` following the format of `edit_ft/DiffSynth-Studio/data/example.json`.
 ### Fine-tuning of Qwen-Edit-2509
@@ -226,7 +241,7 @@ cd edit_ft/DiffSynth-Studio
 
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python3 examples/qwen_image/model_training/validate_lora/qwen_image_edit_2509_multigpu.py \
     --model_name "Qwen-Image-Edit-2509_lora32_bs8_1k_50k" \
-    --model_path /path/to/model/ckpt/ \
+    --model_path /path/to/lora/ckpt/ \
     --epoch 2 \
     --edit_prompt_idx 1 \
     --test_json examples/qwen_image/model_training/validate_lora/if_bench_image.json \
