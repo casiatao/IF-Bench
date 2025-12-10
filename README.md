@@ -42,9 +42,9 @@ All supported models are listed in `load_func_dict` in `evaluate/bench_evaluate.
 ### 🏃 Quick Start
 - Image Download
 
-(1) Download images in IF-Bench from [HuggingFace](https://huggingface.co/datasets/casiatao/IF-Bench) and save in `evaluate/if_bench/infrared_imgs`.
+(1) Download images in IF-Bench from [IF-Bench](https://huggingface.co/datasets/casiatao/IF-Bench) and save in `evaluate/if_bench/infrared_imgs`.
 
-(2) Download translated images in GenViP from [HuggingFace](https://huggingface.co/datasets/casiatao/IF-Bench) and save in `evaluate/if_bench/translated_rgb_imgs`.
+(2) Download translated images in GenViP from [IF-Bench](https://huggingface.co/datasets/casiatao/IF-Bench) and save in `evaluate/if_bench/translated_rgb_imgs`.
 
 - Launch Evaluation
 ```
