@@ -8,8 +8,8 @@ with Generative Visual Prompting </h1>
   <img src='https://img.shields.io/badge/Arxiv-2502.01051-A42C25?style=flat&logo=arXiv&logoColor=A42C25'></a>  -->
   <a href='https://huggingface.co/datasets/casiatao/IF-Bench'>
   <img src='https://img.shields.io/badge/%F0%9F%A4%97%20Benchmark-IF Bench-yellow'></a>
-  <!-- <a href='https://huggingface.co/casiatao/LRM'>
-  <img src='https://img.shields.io/badge/%F0%9F%A4%97%20Model-GenViP-yellow'></a> -->
+  <a href='https://huggingface.co/casiatao/Qwen-Edit-2509-FT'>
+  <img src='https://img.shields.io/badge/%F0%9F%A4%97%20Model-Qwen%E2%80%90Edit%E2%80%902509%E2%80%90FT-blue'></a>
   <a href='https://visitor-badge.laobi.icu/badge?page_id=casiatao.IF-Bench'>
   <img src="https://visitor-badge.laobi.icu/badge?page_id=casiatao.IF-Bench&left_color=gray&right_color=%2342b983"></a> 
 </p>
@@ -188,7 +188,7 @@ python3 merge_results.py \
 # other cases are similar to qwen25_vl_7b
 ```
 
-## 🤗 (Optional) Fine-tuning of Editing Models in GenViP
+## (Optional) Fine-tuning of Editing Models in GenViP
 Our fine-tuning of Qwen-Edit-2509 is based on the DiffSynth-Studio.
 Prepare training data `rgbt_dataset.json` following the format of `edit_ft/DiffSynth-Studio/data/example.json`.
 ### Fine-tuning of Qwen-Edit-2509
@@ -218,6 +218,8 @@ accelerate launch --dynamo_backend no --gpu_ids 0,1,2,3,4,5,6,7 --num_processes 
   --dataset_num_workers 8 \
   --find_unused_parameters
 ```
+
+**Note**: Our fine-tuned model is available at [Qwen-Edit-2509-FT](https://huggingface.co/casiatao/Qwen-Edit-2509-FT). You can directly use it for inference.
 
 ### Inference
 - Inference of Qwen-Edit-2509
