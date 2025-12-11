@@ -14,6 +14,11 @@ with Generative Visual Prompting </h1>
   <img src="https://visitor-badge.laobi.icu/badge?page_id=casiatao.IF-Bench&left_color=gray&right_color=%2342b983"></a> 
 </p>
 
+## 📝 News
+* [2025.12.11]: 🔥 The fine-tuned Qwen-Edit-2509 for infrared-to-RGB translation is released at [Qwen-Edit-2509-FT](https://huggingface.co/casiatao/Qwen-Edit-2509-FT)!
+* [2025.12.11]: 🔥 The IF-Bench is released at [IF-Bench](https://huggingface.co/datasets/casiatao/IF-Bench)!
+* [2025.12.11]: 🔥 The source code is publicly available here!
+
 
 ## 📖 Introduction
 This repository contains the official evaluation implementation of IF-Bench, the first high-quality benchmark for evaluating multimodal understanding of infrared images, and the training implementation of editing models in GenViP.
@@ -256,4 +261,12 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python3 examples/qwen_image/model_training/
 ```
 
 ## ⭐ Citation 
-If you find this repository helpful, please consider giving it a star ⭐.
+If you find this repository helpful, please consider giving it a star ⭐ and citing:
+```bibtex
+@misc{zhang2025ifbench,
+    title={{IF-Bench}: Benchmarking and Enhancing MLLMs for Infrared Images with Generative Visual Prompting}, 
+    author={Tao Zhang and Yuyang Hong and Yang Xia and Kun Ding and Zeyu Zhang and Ying Wang and Shiming Xiang and Chunhong Pan},
+    journal={arXiv preprint arXiv:2512.09663},
+    year={2025}
+}
+```
