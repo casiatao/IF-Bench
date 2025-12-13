@@ -231,7 +231,20 @@ accelerate launch --dynamo_backend no --gpu_ids 0,1,2,3,4,5,6,7 --num_processes 
 ```
 cd edit_ft/DiffSynth-Studio
 
+# faster inference speed (requiring GPU memory > 60GB)
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python3 examples/qwen_image/model_training/validate_lora/qwen_image_edit_2509_multigpu.py \
+    --model_name "origin_Qwen-Image-Edit-2509" \
+    --epoch 2 \
+    --edit_prompt_idx 1 \
+    --test_json examples/qwen_image/model_training/validate_lora/if_bench_image.json \
+    --src_dir /path/to/images/in/if_bench \
+    --save_path /path/to/save/dir \
+    --inference_step 40 \
+    --height 1024 \
+    --width 1024
+
+# lower gpu memory occupation (requiring GPU memory < 20GB)
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python3 examples/qwen_image/model_training/validate_lora/qwen_image_edit_2509_multigpu_low.py \
     --model_name "origin_Qwen-Image-Edit-2509" \
     --epoch 2 \
     --edit_prompt_idx 1 \
@@ -247,7 +260,21 @@ CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python3 examples/qwen_image/model_training/
 ```
 cd edit_ft/DiffSynth-Studio
 
+# faster inference speed (requiring GPU memory > 60GB)
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python3 examples/qwen_image/model_training/validate_lora/qwen_image_edit_2509_multigpu.py \
+    --model_name "Qwen-Image-Edit-2509_lora32_bs8_1k_50k" \
+    --model_path /path/to/lora/ckpt/ \
+    --epoch 2 \
+    --edit_prompt_idx 1 \
+    --test_json examples/qwen_image/model_training/validate_lora/if_bench_image.json \
+    --src_dir /path/to/images/in/if_bench \
+    --save_path /path/to/save/dir \
+    --inference_step 40 \
+    --height 1024 \
+    --width 1024
+
+# lower gpu memory occupation (requiring GPU memory < 20GB)
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python3 examples/qwen_image/model_training/validate_lora/qwen_image_edit_2509_multigpu_low.py \
     --model_name "Qwen-Image-Edit-2509_lora32_bs8_1k_50k" \
     --model_path /path/to/lora/ckpt/ \
     --epoch 2 \
