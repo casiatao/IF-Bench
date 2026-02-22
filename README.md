@@ -15,6 +15,7 @@ with Generative Visual Prompting </h1>
 </p>
 
 ## 📝 News
+* [2026.02.21]: 🎉 Congratulations! Our paper has been accepted by CVPR 2026!
 * [2025.12.11]: 🔥 The fine-tuned Qwen-Edit-2509 for infrared-to-RGB translation is released at [Qwen-Edit-2509-FT](https://huggingface.co/casiatao/Qwen-Edit-2509-FT)!
 * [2025.12.11]: 🔥 The IF-Bench is released at [IF-Bench](https://huggingface.co/datasets/casiatao/IF-Bench)!
 * [2025.12.11]: 🔥 The source code is publicly available here!
